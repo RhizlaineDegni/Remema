@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_6f6ff957b77c4e0983c4e3854794c5e9 }}/rhizlaine/projet_web:latest
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_6f6ff957b77c4e0983c4e3854794c5e9 }}/projet_web:latest
         file: ./Dockerfile
 
   deploy:
