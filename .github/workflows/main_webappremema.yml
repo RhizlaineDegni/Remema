@@ -48,4 +48,4 @@ jobs:
         app-name: 'webappremema'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_b065aa733fe94f3caed1e3ef9a1eeb45 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_6f6ff957b77c4e0983c4e3854794c5e9 }}/rhizlaine/projet_web:${{ github.sha }}'
+        images: 'index.docker.io/rhizlaine/projet_web:latest'
