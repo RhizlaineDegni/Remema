@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_6f6ff957b77c4e0983c4e3854794c5e9 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_120db872279b43e6b1cc833621833cd2 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_a97b8a03f6b9495486e5a0abc633752a }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_162e337d490443e8a7d4bb0704d703d6 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_6f6ff957b77c4e0983c4e3854794c5e9 }}/projet_web:latest
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_a97b8a03f6b9495486e5a0abc633752a }}/rhizlaine/projet_web:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'webappremema'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b065aa733fe94f3caed1e3ef9a1eeb45 }}
-        images: 'index.docker.io/rhizlaine/projet_web:latest'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_dfb5ea8434e049d2983e290eecf437fe }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_a97b8a03f6b9495486e5a0abc633752a }}/rhizlaine/projet_web:${{ github.sha }}'
