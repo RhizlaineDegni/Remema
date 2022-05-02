@@ -14,6 +14,19 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <?php
+            $connect = mysql_connect("85.169.86.170","rememauser", "Remema2022");
+            if (!$connect) {
+                die(mysql_error());
+            }
+            mysql_select_db("libraire");
+            $results = mysql_query("SELECT * FROM librairie");
+            while($row = mysql_fetch_array($results)) {
+
+                echo $row['Name'] . "</br>";
+
+
+            ?>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
