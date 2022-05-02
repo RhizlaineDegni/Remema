@@ -1,8 +1,10 @@
+DROP TABLE IF EXISTS LIBRAIRIE;
+
 CREATE TABLE LIBRAIRIE
 (ISBN varchar(10), 
 Titre varchar(20),
 Auteur varchar(20),
-Annee year,
+Annee integer,
 CONSTRAINT pkn_librarie PRIMARY KEY(ISBN)
 );
 
