@@ -1,0 +1,23 @@
+{
+  "name": "dockernginx",
+  "version": "1.0.0",
+  "description": "docker run -d -p 80:80 --name projet_nginx nginx\r docker cp ./html/ projet_nginx:/usr/share/nginx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RhizlaineDegni/Remema.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RhizlaineDegni/Remema/issues"
+  },
+  "homepage": "https://github.com/RhizlaineDegni/Remema#readme",
+  "dependencies": {
+    "tedious": "^14.4.0"
+  }
+}
